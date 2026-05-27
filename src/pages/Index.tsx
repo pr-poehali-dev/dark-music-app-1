@@ -2,12 +2,12 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Icon from "@/components/ui/icon";
 
 const FANART_URL =
-  "https://cdn.poehali.dev/projects/f2dd484a-4610-4754-819a-8d1cb8c5e66b/files/05b07d0e-f6ae-4da7-bca1-2c85a5b6dce4.jpg";
+  "https://cdn.poehali.dev/projects/f2dd484a-4610-4754-819a-8d1cb8c5e66b/files/3288495d-0094-422b-a5e2-f58bf2dca54b.jpg";
 
 const API_URL = "https://functions.poehali.dev/cb9a3746-2f46-4013-a717-077ef7cd9b26";
 
 const DEMO_TRACKS = [
-  { id: -1, title: "Baby Doll Remix Vol.1", artist: "NekoBeats Studio", duration: 195, cover_emoji: "🎀", color: "#f472b6", genre: "Remix", file_url: "" },
+  { id: -1, title: "Baby Doll Remix Vol.1", artist: "Digital Sayori Funnysprout", duration: 195, cover_emoji: "🎀", color: "#f472b6", genre: "Remix", file_url: "" },
   { id: -2, title: "Baby Doll Lo-Fi Mix", artist: "CaféCat Records", duration: 212, cover_emoji: "🌸", color: "#a78bfa", genre: "Lo-Fi", file_url: "" },
   { id: -3, title: "Cat Café Morning", artist: "WhiskerTunes", duration: 168, cover_emoji: "☕", color: "#34d399", genre: "Ambient", file_url: "" },
   { id: -4, title: "Meow Parade", artist: "WhiskerTunes", duration: 143, cover_emoji: "🐱", color: "#fbbf24", genre: "Pop", file_url: "" },
@@ -563,10 +563,13 @@ function HomeHero({ onEnter }: { onEnter: () => void }) {
 
       <h1 className="text-4xl font-black text-center mb-2"
         style={{ background: "linear-gradient(135deg, #a78bfa, #f472b6, #60a5fa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-        NekoBeats
+        Digital Sayori
       </h1>
-      <p className="text-white/40 text-sm text-center mb-1">Сайори 🐰 & Спраут 🍓</p>
-      <p className="text-white/25 text-center mb-8 font-caveat text-lg">Baby Doll Remixes · Cat Café Melodies</p>
+      <h2 className="text-xl font-black text-center mb-2" style={{ background: "linear-gradient(135deg, #f472b6, #fbbf24)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+        Funnysprout
+      </h2>
+      <p className="text-white/40 text-sm text-center mb-1">Сайори 🌸 & Funny Sprout 🍓</p>
+      <p className="text-white/25 text-center mb-8 font-caveat text-lg">DDLC · Baby Doll Remixes · Cat Café Melodies</p>
 
       <div className="flex gap-3 mb-8">
         {[
@@ -722,7 +725,7 @@ const Index = () => {
           <PawIcon color="#a78bfa" size={24} />
           <span className="font-black text-lg"
             style={{ background: "linear-gradient(135deg, #a78bfa, #f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            NekoBeats
+            Digital Sayori
           </span>
         </button>
         <div className="flex items-center gap-2">
