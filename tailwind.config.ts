@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1779862999453464646.html"
 	],
 	prefix: "",
 	theme: {
@@ -88,7 +89,15 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'spin-slow': 'spin-slow 12s linear infinite',
+			},
+			fontFamily: {
+				nunito: ['Nunito', 'sans-serif'],
+				caveat: ['Caveat', 'cursive'],
 			}
 		}
 	},

@@ -4,89 +4,56 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 260 30% 8%;
+    --foreground: 280 20% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 260 25% 11%;
+    --card-foreground: 280 20% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 260 25% 11%;
+    --popover-foreground: 280 20% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 285 60% 65%;
+    --primary-foreground: 260 30% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 260 20% 18%;
+    --secondary-foreground: 280 20% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 260 20% 15%;
+    --muted-foreground: 270 15% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 320 55% 65%;
+    --accent-foreground: 260 30% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 260 20% 20%;
+    --input: 260 20% 18%;
+    --ring: 285 60% 65%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 260 30% 8%;
+    --sidebar-foreground: 280 20% 92%;
+    --sidebar-primary: 285 60% 65%;
+    --sidebar-primary-foreground: 260 30% 8%;
+    --sidebar-accent: 260 20% 15%;
+    --sidebar-accent-foreground: 280 20% 92%;
+    --sidebar-border: 260 20% 20%;
+    --sidebar-ring: 285 60% 65%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Кошачьи лапки — цвета */
+    --paw-pink: #f472b6;
+    --paw-purple: #a78bfa;
+    --paw-blue: #60a5fa;
+    --paw-green: #34d399;
+    --paw-yellow: #fbbf24;
+    --paw-orange: #fb923c;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Градиент фона */
+    --bg-grad-from: #0d0a18;
+    --bg-grad-to: #160c2a;
   }
 }
 
@@ -97,5 +64,202 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(
+      135deg,
+      var(--bg-grad-from) 0%,
+      var(--bg-grad-to) 100%
+    );
+    min-height: 100vh;
   }
+}
+
+/* Кошачья лапка SVG-стиль */
+.paw-btn {
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
+  outline: none;
+}
+
+.paw-btn:hover {
+  transform: scale(1.15) rotate(-5deg);
+  filter: brightness(1.2);
+}
+
+.paw-btn:active {
+  transform: scale(0.92);
+}
+
+/* Звёздный фон */
+.stars-bg {
+  background-image:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(167, 139, 250, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(244, 114, 182, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(96, 165, 250, 0.04) 0%,
+      transparent 70%
+    );
+}
+
+/* Анимации */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(167, 139, 250, 0.7);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes paw-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+.animate-paw-bounce {
+  animation: paw-bounce 0.4s ease-in-out;
+}
+
+/* Стеклянный эффект */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(167, 139, 250, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 1.2rem;
+}
+
+/* Прогресс-бар треков */
+.track-progress {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(167, 139, 250, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.track-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a78bfa, #f472b6);
+  transition: width 0.1s linear;
+}
+
+/* Навигация */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-item.active {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.12);
+}
+
+.nav-item:hover:not(.active) {
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.3);
+  border-radius: 2px;
 }
